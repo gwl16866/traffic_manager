@@ -13,14 +13,14 @@ public class MqBean {
         return str.toString();
     }
 
-    public String num(@Param("time")String time,@Param("learnType")String learnType){
+    public String num(@Param("time")String time,@Param("learnType")Integer learnType){
         StringBuffer str=new StringBuffer(" select  * from saftyedu where 1=1 ");
         System.out.println(time);
         System.out.println(learnType);
             if(time!=null && time!=""){
                 str.append(" and date_format(startTime,'%Y')= "+time+"  ");
             }
-        if(learnType!=null && learnType!=""){
+        if(learnType!=null){
             str.append(" and learnType= '"+learnType+"' ");
         }
 

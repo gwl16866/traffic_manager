@@ -7,10 +7,6 @@ import com.hy.traffic.studentInfo.entity.Studentinfo;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.SelectProvider;
-
-import java.util.List;
 
 @Mapper
 public interface SaftyeduMapper extends BaseMapper<Saftyedu> {
@@ -47,6 +43,6 @@ public interface SaftyeduMapper extends BaseMapper<Saftyedu> {
     public List<Saftyedu> year(Integer i);
 
     @SelectProvider(type =MqBean.class,method = "num")
-    public List<Saftyedu> num(String time,String learnType);
+    public List<Saftyedu> num(String time,Integer learnType);
 
 }

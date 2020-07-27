@@ -44,27 +44,27 @@ public class Statistics {
     @ResponseBody
     @RequestMapping("/Bchar1")
     public List<Bchar> Bchar1(){
-        return saftyeduService.num("线上");
+        return saftyeduService.num(1);
     }
 
     @ResponseBody
     @RequestMapping("/Bchar2")
     public List<Bchar> Bchar2(){
-        return saftyeduService.num("线下");
+        return saftyeduService.num(2);
     }
 
     @ResponseBody
     @RequestMapping("/Bchar3")
     public List<Bchar> Bchar3(){
-        return saftyeduService.num("线上+线下");
+        return saftyeduService.num(3);
     }
 
     @ResponseBody
     @RequestMapping("/inittableData")
     public List<Bcharinfo> inittableData(){
-        List<Bchar> list=saftyeduService.num("线上");
-        List<Bchar> list2=saftyeduService.num("线下");
-        List<Bchar> list3=saftyeduService.num("线上+线下");
+        List<Bchar> list=saftyeduService.num(1);
+        List<Bchar> list2=saftyeduService.num(2);
+        List<Bchar> list3=saftyeduService.num(3);
 
         List<Bcharinfo> res=new ArrayList<>();
         Bcharinfo bcharinfo=new Bcharinfo();

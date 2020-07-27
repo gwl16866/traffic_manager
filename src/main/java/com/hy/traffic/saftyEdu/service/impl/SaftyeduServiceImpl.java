@@ -1,18 +1,14 @@
 package com.hy.traffic.saftyEdu.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hy.traffic.saftyEdu.entity.Bchar;
 import com.hy.traffic.saftyEdu.entity.Saftyedu;
 import com.hy.traffic.saftyEdu.mapper.SaftyeduMapper;
 import com.hy.traffic.saftyEdu.service.ISaftyeduService;
 import com.hy.traffic.studentInfo.entity.Studentinfo;
-import org.springframework.beans.factory.annotation.Autowired;
 import com.hy.traffic.studentaccmq.mapper.StudentaccmqMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -62,8 +58,6 @@ public class SaftyeduServiceImpl extends ServiceImpl<SaftyeduMapper, Saftyedu> i
     }
 
 
-    @Autowired
-    SaftyeduMapper saftyeduMapper;
 
     @Autowired
     StudentaccmqMapper studentaccmqMapper;
@@ -100,7 +94,7 @@ public class SaftyeduServiceImpl extends ServiceImpl<SaftyeduMapper, Saftyedu> i
         return in;
     }
 
-    public  List<Bchar> num(String learnType){
+    public  List<Bchar> num(Integer learnType){
         System.out.println("测=="+learnType);
         Integer[] in=new Integer[2];
         int nb=0;
