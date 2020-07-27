@@ -21,6 +21,7 @@ public class Studentinfo implements Serializable {
     /**
      * ͷ
      */
+    private Integer id;
     private String headImg;
 
     private String companyName;
@@ -50,6 +51,10 @@ public class Studentinfo implements Serializable {
     private String jobType;
 
     private LocalDateTime induction;
+    //安全教育课程状态
+private Integer completion;
+private Integer studentid;
+private Integer saftyid;
 
 
 }
