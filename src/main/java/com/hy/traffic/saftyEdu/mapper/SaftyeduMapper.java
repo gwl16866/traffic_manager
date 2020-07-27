@@ -14,4 +14,7 @@ public interface SaftyeduMapper extends BaseMapper<Saftyedu> {
     @SelectProvider(type = MqBean.class,method = "year")
     public List<Saftyedu> year(Integer i);
 
+    @SelectProvider(type =MqBean.class,method = "num")
+    public List<Saftyedu> num(String time,String learnType);
+
 }
