@@ -1,5 +1,11 @@
 package com.hy.traffic.studentInfo.entity;
 
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -74,10 +80,6 @@ public class Studentinfo implements Serializable {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss" ,timezone = "Asia/Shanghai")
     @TableField("induction")
     private LocalDateTime induction;
-    //安全教育课程状态
-private Integer completion;
-private Integer studentid;
-private Integer saftyid;
 
     @TableField("headImgStatus")
     private Integer headImgStatus;
@@ -96,5 +98,10 @@ private Integer saftyid;
 
     @TableField(exist = false)
     private String inductions;
+
+    //安全教育课程状态
+    private Integer completion;
+    private Integer studentid;
+    private Integer saftyid;
 
 }
