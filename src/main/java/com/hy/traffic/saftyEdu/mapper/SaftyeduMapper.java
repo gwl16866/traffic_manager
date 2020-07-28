@@ -2,9 +2,7 @@ package com.hy.traffic.saftyEdu.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.hy.traffic.saftyEdu.entity.Saftyedu;
-import com.hy.traffic.saftyEdu.entity.Tree;
 import com.hy.traffic.studentInfo.entity.Studentinfo;
-import com.hy.traffic.teachInfo.entity.ClassDetail;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
@@ -59,4 +57,12 @@ public interface SaftyeduMapper extends BaseMapper<Saftyedu> {
 
     @Select("select * from classdetails where id in (${id})")
     public List<ClassDetail> classDetailList(String id);
+    public void batchAddStudent(Integer saftyid,Integer studentid);
+
+    @SelectProvider(type = MqBean.class,method = "year")
+    public List<Saftyedu> year(Integer i);
+
+    @SelectProvider(type =MqBean.class,method = "num")
+    public List<Saftyedu> num(String time,Integer learnType);
+
 }

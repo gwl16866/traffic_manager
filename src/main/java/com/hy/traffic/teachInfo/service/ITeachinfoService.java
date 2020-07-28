@@ -25,6 +25,7 @@ public interface ITeachinfoService extends IService<Teachinfo> {
   public Question queryOneAnswer(Integer id);
   public boolean addQuesObject(AddQuesObject add);
   public boolean addLession(AddLession add);
+  public boolean addLessionsJie(AddLessions add);
 
 
 

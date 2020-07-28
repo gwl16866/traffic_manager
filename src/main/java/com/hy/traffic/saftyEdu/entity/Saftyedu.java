@@ -1,8 +1,10 @@
 package com.hy.traffic.saftyEdu.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
@@ -47,4 +49,10 @@ public class Saftyedu implements Serializable {
     private String trainTeacher;
 
 private String learnTime;
+    @TableField(exist = false)
+    private Integer jd;
+    @TableField(exist = false)
+    private Integer a;
+    @TableField(exist = false)
+    private Integer b;
 }
