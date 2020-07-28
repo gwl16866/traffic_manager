@@ -1,9 +1,11 @@
 package com.hy.traffic.saftyEdu.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 
-import java.time.LocalDateTime;
 import java.io.Serializable;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * <p>
@@ -17,12 +19,16 @@ import java.io.Serializable;
 public class Saftyedu implements Serializable {
 
     private static final long serialVersionUID = 1L;
+    private Integer id;
+//学习人数
+    private Integer count;
 
     private String theme;
 
-    private LocalDateTime startTime;
+   private Date startTime;
 
-    private LocalDateTime endTime;
+
+    private Date endTime;
 
     private String project;
 
@@ -34,7 +40,7 @@ public class Saftyedu implements Serializable {
 
     private String testPeople;
 
-    private String learnType;
+    private Integer learnType;
 
     private Integer status;
 
@@ -42,5 +48,11 @@ public class Saftyedu implements Serializable {
 
     private String trainTeacher;
 
-
+private String learnTime;
+    @TableField(exist = false)
+    private Integer jd;
+    @TableField(exist = false)
+    private Integer a;
+    @TableField(exist = false)
+    private Integer b;
 }
