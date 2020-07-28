@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.security.auth.Subject;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.util.List;
@@ -35,6 +34,7 @@ public class TeachinfoController {
      */
     @RequestMapping("queryAllTeachinfo")
     public List<Teachinfo> queryAllTeachinfo(){
+
         return teachinfoService.queryAllTeachinfo();
     }
 
