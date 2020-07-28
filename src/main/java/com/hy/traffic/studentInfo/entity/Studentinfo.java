@@ -100,8 +100,13 @@ public class Studentinfo implements Serializable {
     private String inductions;
 
     //安全教育课程状态
+    @TableField(exist = false)
     private Integer completion;
+
+    @TableField(exist = false)
     private Integer studentid;
+
+    @TableField(exist = false)
     private Integer saftyid;
 
 }
