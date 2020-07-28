@@ -23,6 +23,8 @@ public class Saftyedu implements Serializable {
 //学习人数
     private Integer count;
 
+
+
     private String theme;
 
    private Date startTime;

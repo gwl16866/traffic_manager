@@ -33,6 +33,8 @@ public class Studentinfo implements Serializable {
     private Integer id;
 
     @TableField("headimg")
+    private Integer id;
+
     private String headImg;
 
     @TableField("companyname")
