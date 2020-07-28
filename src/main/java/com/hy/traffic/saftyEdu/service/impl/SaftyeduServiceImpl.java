@@ -3,10 +3,12 @@ package com.hy.traffic.saftyEdu.service.impl;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hy.traffic.saftyEdu.entity.Bchar;
 import com.hy.traffic.saftyEdu.entity.Saftyedu;
+import com.hy.traffic.saftyEdu.entity.Tree;
 import com.hy.traffic.saftyEdu.mapper.SaftyeduMapper;
 import com.hy.traffic.saftyEdu.service.ISaftyeduService;
 import com.hy.traffic.studentInfo.entity.Studentinfo;
 import com.hy.traffic.studentaccmq.mapper.StudentaccmqMapper;
+import com.hy.traffic.teachInfo.entity.ClassDetail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -35,13 +37,15 @@ public class SaftyeduServiceImpl extends ServiceImpl<SaftyeduMapper, Saftyedu> i
 
     public Integer selectStudentCount(Integer id){
         return saftyeduMapper.selectStudentCount(id);
-    };
-
-    public void updateStatus(Integer id,Integer status){
-         saftyeduMapper.updateStatus(id,status);
     }
 
-    public List<Studentinfo> selectStudent(Integer id){
+    ;
+
+    public void updateStatus(Integer id, Integer status) {
+        saftyeduMapper.updateStatus(id, status);
+    }
+
+    public List<Studentinfo> selectStudent(Integer id) {
         return saftyeduMapper.selectStudent(id);
     }
     public void deleteStudent(Integer studentid,Integer saftyid) {
@@ -57,6 +61,33 @@ public class SaftyeduServiceImpl extends ServiceImpl<SaftyeduMapper, Saftyedu> i
         saftyeduMapper.batchAddStudent(saftyid,studentid);
     }
 
+    public List<Studentinfo> selectAllStu() {
+       return saftyeduMapper.selectAllStu();
+    }
+
+    public List<Tree> queryclassDetail(){
+        return saftyeduMapper.queryclassDetail();
+    };
+
+    public void addSaftyEdu(String theme, String startTime, String endTime, String lession, String manager, String testPeople, Integer learnType, String learnTime){
+         saftyeduMapper.addSaftyEdu(theme, startTime, endTime, lession, manager,testPeople, learnType, learnTime);
+    };
+
+    public Integer selectMaxId(){
+      return   saftyeduMapper.selectMaxId();
+    }
+
+    public void deleteSaftyedu(Integer id){
+         saftyeduMapper.deleteSaftyedu(id);
+    }
+
+
+    public Saftyedu selectlession(Integer id){
+      return   saftyeduMapper.selectlession(id);
+    }
+public List<ClassDetail> classDetailList(String id){
+        return saftyeduMapper.classDetailList(id);
+}
 
 
     @Autowired
