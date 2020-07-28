@@ -21,6 +21,8 @@ public class Studentinfo implements Serializable {
     /**
      * ͷ
      */
+    private Integer id;
+
     private String headImg;
 
     private String companyName;

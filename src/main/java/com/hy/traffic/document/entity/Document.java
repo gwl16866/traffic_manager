@@ -2,7 +2,6 @@ package com.hy.traffic.document.entity;
 
 import lombok.Data;
 
-import java.time.LocalDateTime;
 import java.io.Serializable;
 
 /**
@@ -18,6 +17,8 @@ public class Document implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    private Integer id;
+
     private String num;
 
     private String title;
@@ -30,9 +31,9 @@ public class Document implements Serializable {
 
     private String readTime;
 
-    private LocalDateTime createTime;
+    private String createTime;
 
-    private LocalDateTime updateTime;
+    private String updateTime;
 
     private Integer status;
 

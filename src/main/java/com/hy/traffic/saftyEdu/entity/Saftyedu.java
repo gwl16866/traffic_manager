@@ -2,7 +2,6 @@ package com.hy.traffic.saftyEdu.entity;
 
 import lombok.Data;
 
-import java.time.LocalDateTime;
 import java.io.Serializable;
 
 /**
@@ -18,11 +17,14 @@ public class Saftyedu implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    private int id;
+
     private String theme;
 
-    private LocalDateTime startTime;
 
-    private LocalDateTime endTime;
+    private String  startTime;
+
+    private String endTime;
 
     private String project;
 

@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.http.HttpMessageConverters;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.converter.HttpMessageConverter;
 
+
 @SpringBootApplication
 public class TrafficManagerApplication {
 
