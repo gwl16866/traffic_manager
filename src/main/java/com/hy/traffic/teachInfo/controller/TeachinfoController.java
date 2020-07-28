@@ -150,6 +150,20 @@ public class TeachinfoController {
     }
 
 
+    /**
+     * 添加课节
+     * @param addLessions
+     * @return
+     */
+    @RequestMapping("addLessionsJie")
+    public boolean addLessionsJie(@RequestBody AddLessions addLessions){
+        return teachinfoService.addLessionsJie(addLessions);
+    }
+
+
+
+
+
 
 
 
