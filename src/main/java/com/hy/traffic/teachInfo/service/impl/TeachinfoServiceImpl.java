@@ -128,5 +128,17 @@ public class TeachinfoServiceImpl extends ServiceImpl<TeachinfoMapper, Teachinfo
         return true;
     }
 
+    @Override
+    public boolean addLessionsJie(AddLessions add) {
+        //mapper.addLession(add.getZhangjie(),null,null,add.getDagang());
+        //Integer z = mapper.maxCid();
+        //添加节
+        mapper.addLession(add.getDajie(),add.getZhangjie(),null,add.getDagang());
+        Integer j = mapper.maxCid();
+        //添加小节
+        mapper.addLession(add.getXiaojie(),j.toString(),add.getShipin(),add.getDagang());
+        return true;
+    }
+
 
 }
